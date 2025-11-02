@@ -25,10 +25,12 @@ const createUser = async (req, res) => {
       return res.status(404).json({ message: "Use a different Email" });
     }
 
-    const user = await User.create({
+    const user = new User({
       name,
       email,
     });
+
+    await user.save()
 
     return res.status(201).json({ message: "Details added successfully", details: user });
   } catch (error) {
