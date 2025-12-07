@@ -90,7 +90,7 @@ function App() {
             name="number"
             onChange={handleChange}
             className="border p-2 border-gray-500 rounded-md focus:outline-none mb-5 focus:border-purple-600 w-full"
-            placeholder="Enter Number e.g. +233 123 456 789"
+            placeholder="Enter  number e.g +233 123 4567890"
           />
 
           <button
