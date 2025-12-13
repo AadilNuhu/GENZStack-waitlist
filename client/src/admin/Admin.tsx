@@ -13,19 +13,10 @@ export default function Admin() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const token = prompt("Enter admin token:");
-
-    if (!token) {
-      setError("No token entered");
-      return;
-    }
 
     const fetchUsers = async () => {
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_URL}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
         });
         setLoading(false);
         setUsers(res.data);
